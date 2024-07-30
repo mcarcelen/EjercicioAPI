@@ -4,7 +4,9 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Usuarios extends Model {
-    
+    static associate(models) {
+      models.Usuario.belongsToMany(models.Perfil, { through:'UsuariosPerfiles', foreignKey: "[perfil_id" } );
+  }
   }
   Usuarios.init({
     usuario: DataTypes.STRING,

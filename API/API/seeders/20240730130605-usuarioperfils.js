@@ -7,10 +7,10 @@ module.exports = {
     let [perfils, perfils_metadata] = await queryInterface.sequelize.query('SELECT id FROM Perfils')
 
     await queryInterface.bulkInsert('UsuariosPerfiles', [
-    { usuarios_id: usuarios[0].id, perfils_id: perfils[0].id, createdAt: new Date(), updatedAt: new Date() },
-    { usuarios_id: usuarios[1].id, perfils_id: perfils[1].id, createdAt: new Date(), updatedAt: new Date() },
-    { usuarios_id: usuarios[2].id, perfils_id: perfils[2].id, createdAt: new Date(), updatedAt: new Date() },
-    { usuarios_id: usuarios[3].id, perfils_id: perfils[3].id, createdAt: new Date(), updatedAt: new Date() },
+    { usuario_id: usuarios[0].id, perfil_id: perfils[0].id, createdAt: new Date(), updatedAt: new Date() },
+    { usuario_id: usuarios[1].id, perfil_id: perfils[1].id, createdAt: new Date(), updatedAt: new Date() },
+    { usuario_id: usuarios[2].id, perfil_id: perfils[2].id, createdAt: new Date(), updatedAt: new Date() },
+    { usuario_id: usuarios[3].id, perfil_id: perfils[3].id, createdAt: new Date(), updatedAt: new Date() },
 
   ],{});
     },

@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
         models.Perfil.belongsToMany(models.Usuario, { through:'UsuariosPerfiles', foreignKey: "usuarios_id" } );
-         }
+    }
   }
   Perfil.init({
     descripcion: DataTypes.STRING,
